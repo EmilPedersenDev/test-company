@@ -2,12 +2,22 @@
   "name": "company-test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.14.x",
+    "node": "14.15.x"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "node history-routes-server.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.8.3",
+    "express": "^4.17.3",
+    "serve-favicon": "^2.5.0",
+    "serve-static": "^1.15.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
